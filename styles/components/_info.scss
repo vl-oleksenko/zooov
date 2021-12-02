@@ -1,0 +1,91 @@
+@import '../common/vars';
+
+.info {
+    padding: 90px 0;
+
+    @include b(tablet) {
+        padding: 53px 0 41px;
+    }
+
+    &__wrapper {
+        padding: 80px 0;
+        background-color: $lavender-blush;
+        overflow: hidden;
+    }
+
+    &__wrap {
+        display: flex;
+        margin: 0 -30px;
+        align-items: center;
+
+        @include b(tablet) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__col {
+        width: 50%;
+        padding: 0 30px;
+
+        @include b(tablet) {
+            width: 100%;
+        }
+
+        &--content {
+            @include b(tablet) {
+                margin-bottom: 76px;
+            }
+        }
+    }
+
+    &__images {
+        position: relative;
+        padding-bottom: 32%;
+        // padding-bottom: 32% задали, для того чтобы опустить нижу вторую картику
+        // и закруепить её с помощью bottom/right 0, 
+        // так же задали ей width, так же как первой
+        
+        @include b(tablet) {
+            padding-bottom: 31%;
+        }
+    }
+
+    &__img-back {
+        width: 85%; 
+        // width: 85%; высчитали следующим образом
+        // ширина колонки(675px) - отступ картинки с левого края(120px) = 555px
+        // ширину картинки(475px) / 555px = 85%
+        @include b(tablet) {
+            width: 80%;
+        }
+    }
+
+    &__img-top {
+        position: absolute;
+        width: 65%;
+        bottom: 0;
+        right: 0;
+        @include b(tablet) {
+            width: 62%;
+        }
+    }
+
+    &__caption {
+        max-width: 416px;
+        margin-bottom: 40px;
+
+        @include b(tablet) {
+            margin-bottom: 24px;
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        margin-bottom: 21px;
+        color: $secondary-color;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

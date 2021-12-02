@@ -1,0 +1,51 @@
+@import '../common/vars';
+
+.footer {
+    background-color: $primary-color;
+    color: $white-color;
+    padding: 80px 0;
+    margin-top: 170px;
+
+    &__wrap {
+        display: flex;
+    }
+
+    &__contacts {
+        max-width: 302px;
+    }
+
+    &__form {
+        width: calc(100% - 302px);
+        padding-left: 180px;
+    }
+
+    &__caption {
+        margin-bottom: 8px;
+    }
+
+    &__info {
+        margin-bottom: 32px;
+    }
+
+    &__phone {
+        margin-bottom: 24px;
+    }
+
+    &__phone-link {
+        font-weight: 700;
+
+        &:hover {
+            color: $queen-pink;
+        }
+    }
+
+    &__btns {
+        margin-bottom: 40px;
+
+    }
+
+    &__contact-item {
+        margin-bottom: 16px;
+    }
+
+}

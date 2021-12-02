@@ -1,0 +1,118 @@
+@import '../common/vars';
+
+.why {
+    padding: 90px 0;
+    position: relative;
+    z-index: 5;
+    @include b(mobile) {
+        padding: 40px 0;
+    }
+
+    &__caption {
+        margin-bottom: 60px;
+        @include b(mobile) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__outer{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include b(mobile) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__col {
+        padding: 0 10px;
+        @include b(mobile) {
+            width: 282px;
+            padding: 10px;
+        }
+        @include b(mobile-sm) {
+            width: 100%;
+            padding: 20px 0;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+
+    &__icone {
+        margin-bottom: 16px;
+    }
+
+
+    &__title {
+        font-size: 18px;
+        line-height: 1.3;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    &__descr {
+        max-width: 282px;
+
+        &--leaf {
+            max-width: 220px;
+            @include b(mobile) {
+            max-width: 300px;
+        }
+        }
+
+        &--heart {
+            max-width: 225px;
+            @include b(mobile) {
+            max-width: 305px;
+        }
+        }
+        
+        &--paw {
+            max-width: 215px;
+            @include b(mobile) {
+            max-width: 325px;
+        }
+        }
+        @include b(mobile) {
+            max-width: 305px;
+        }
+    }
+
+    &__ellipse {
+        position: absolute;
+        left: 0;
+        top: 160px;
+        z-index: -5;
+        width: 100%;
+        @include b(mobile) {
+            top: 100px;
+            width: 1400px;
+            top: 160px;
+        }
+        @include b(mobile-sm) {
+            width: 1400px;
+            top: 100px;
+        }
+    }
+
+    &__ellipse-display {
+        display: none;
+        @include b(mobile-sm) {
+            display: block;
+            position: absolute;
+            top: 350px;
+            left: 0;
+            width: 1400px;
+            z-index: -5;
+        }
+        @include b(mobile-sm) {
+            width: 1400px;
+            left: -450px;
+            top: 500px;
+        }
+    }
+}

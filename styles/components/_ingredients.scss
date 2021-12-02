@@ -1,0 +1,63 @@
+@import '../common/vars';
+
+.ingredients {
+
+    padding: 40px 0 100px;
+    position: relative;
+
+    &__outer {
+        padding: 32px 80px;
+        background-color: $queen-pink;
+        position: relative; 
+        z-index: 4;
+    }
+
+    &__wrap {
+        display: flex;
+        margin: 0 -14px;
+    }
+
+    &__col {
+        width: 50%;
+        padding: 0 14px;
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 2;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 32px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 450px;
+    }
+
+    &__item {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 26px;
+    }
+
+    &__icon {
+        width: 20px;
+        color: $primary-color;
+        margin-right: 15px;
+    }
+
+    &__text {
+        color: $secondary-color;
+    }
+
+    &__ellipse {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        z-index: -4;
+    }
+}

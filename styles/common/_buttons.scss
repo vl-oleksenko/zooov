@@ -1,0 +1,64 @@
+@import './vars';
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    font-family: $main-ff;
+    font-size: $main-fz;
+    line-height: $main-lh;
+    font-weight: 600;
+    padding: 13px 42px;
+    cursor: pointer;
+    background-color: $btn-color;
+    color: $white-color;
+    border: none;
+    border-radius: 8px;
+    transition: $trs;
+
+    &:hover {
+        background-color: $btn-hover;
+    }
+
+    svg {
+        
+    }
+    
+    &--ghost {
+        font-weight: 700;
+        border: 1px solid $btn-color;
+        color: $btn-color;
+        cursor: pointer;
+        background-color: transparent;
+        border-radius: 8px;
+        width: 160px;
+        height: 48px;
+
+        &:hover {
+            color: $btn-color;
+            border-color: $btn-ghost-hover;
+            background-color: $btn-ghost-hover;
+        }
+    }
+
+    &--light {
+        background-color: $btn-light-color;
+        color: $btn-light-text;
+
+        &:hover {
+            color: $btn-color;
+            background-color: $btn-light-hover;
+        }
+    }
+    
+    &--opacity {
+        padding: 10px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: $btn-opacity-color;
+
+        &:hover {
+            background-color: $btn-opacity-hover;
+        }
+    }
+}
+

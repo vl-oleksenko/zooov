@@ -1,0 +1,41 @@
+@import '../common/vars';
+
+.feeding {
+    padding: 40px 0 90px;
+
+    &__outer {
+        padding: 54px 100px 54px 50px;
+        background-color: $queen-pink;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__ellipse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -3;
+        width: 100%;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 -20px;
+    }
+
+    &__col {
+        padding: 0 20px;
+    }
+
+    &__text-box {
+        max-width: 705px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 28px;
+        letter-spacing: .02em;
+    }
+}
