@@ -8,6 +8,9 @@
         background-color: $queen-pink;
         position: relative;
         z-index: 3;
+        @include b(mobile) {
+            padding: 32px 24px ;
+        }
     }
 
     &__ellipse {
@@ -16,6 +19,13 @@
         left: 0;
         z-index: -3;
         width: 100%;
+        @include b(mobile) {
+            width: 1400px;
+            left: -300px;
+        }
+        @include b(mobile-sm) {
+            left: -100px;
+        }
     }
 
     &__wrap {
@@ -23,10 +33,21 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 -20px;
+        @include b(mobile) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 
     &__col {
         padding: 0 20px;
+        @include b(mobile) {
+            margin-bottom: 25px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__text-box {
