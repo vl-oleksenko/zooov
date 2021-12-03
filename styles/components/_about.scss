@@ -2,23 +2,34 @@
 
 .about {
     padding: 90px 0 40px;
+    @include b(tablet) {
+        padding: 30px 0 10px;
+    }
 
     &__wrap {
         display: flex;
         align-items: center;
         margin: 0 -14px;
+        @include b(tablet) {
+            flex-direction: column;
+            margin: -20px 0px;
+        }
     }
 
     &__col {
         width: 50%;
         padding: 0 14px;
+        @include b(tablet) {
+            padding: 20px 0;
+            width: 100%;
+        }
     }
 
     &__caption {
         margin-bottom: 32px;
     }
 
-    &__discr {
+    &__descr {
         color: $secondary-color;
         margin-bottom: 24px;
     }
