@@ -2,18 +2,31 @@
 
 .food {
     padding: 100px 0 40px;
+    @include b(mobile) {
+        padding: 30px 0;
+    }
 
     &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 75px;
+        @include b(mobile) {
+            flex-direction: column;
+        }
+        @include b(mobile-sm) {
+            text-align: center;
+            margin-bottom: 30px;
+        }
     }
 
     &__caption {
         min-width: 326px;
         position: relative;
         z-index: 2;
+        @include b(mobile) {
+            margin-bottom: 30px;
+        }
     }
 
     &__ellipse {
@@ -21,23 +34,55 @@
         left: 175px;
         top: -8px;
         z-index: -2;
+        @include b(tablet) {
+            left: 152px;
+            top: -13px;
+        }
+        @include b(mobile-sm) {
+            left: 172px;
+            top: -18;
+        }
     }
 
     &__discr-box {
         padding-left: 60px;
         max-width: 777px;
+        @include b(mobile) {
+            padding: 0 20px;
+            text-align: center;
+        }
+        @include b(mobile-sm) {
+            display: none;
+        }
     }
 
     &__content {
         display: flex;
         justify-content: space-between;
         margin: 0 -13px;
+        @include b(tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0 85px;
+            @include b(mobile) {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+        }
     }
 
     &__col {
         width: 25%;
         padding: 0 13px;
-        
+        @include b(tablet) {
+            max-width: 280px;
+            width: 50%;
+            margin: 13px 0;
+        }
+        @include b(mobile) {
+            width: 100%;
+        }
     }
 
     &__img-box {
